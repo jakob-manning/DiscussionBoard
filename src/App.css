@@ -11,7 +11,7 @@
 }
 
 div {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 1px;
 }
 
@@ -19,8 +19,8 @@ div {
   /*border-bottom: 2px dotted white;*/
   color: white;
   padding: 20px;
-  background-color: darkgray;
-  border: 2px solid blue;
+  background-color: lightblue;
+  font-family: Cambria;
 }
 
 

@@ -3,6 +3,8 @@ import './App.css';
 import Blog from "./Blog/Blog";
 import axios from "./axios-updates";
 
+//clean-up the project. Create separate components for each aspect
+
 class App extends React.Component{
     constructor(props) {
         super(props);
@@ -83,8 +85,8 @@ class App extends React.Component{
     //delete individual items
     deleteHandler = (key) => {
         console.log("delete pressed for " + key)
-        let prevComments = this.state.comments
-        let comments = this.state.comments
+        let prevComments = {...this.state.comments}
+        let comments = {...this.state.comments}
         delete comments[key]
         this.setState({
             comments
@@ -182,14 +184,13 @@ class App extends React.Component{
             )
         }
 
-        //TODO: add an option to create a new discussion board
+        //TODO: add multiple discussion boards. Main page allows you to choose or delete a board
         return (
             <div className="App">
                 <div className={"title"}>
                     <h2>Discussion Board</h2>
                 </div>
                 {comments}
-                {/*//TODO: add a loading icon while you wait for your comment to post*/}
                 {/*<h3 className={"name"}>*/}
                 {/*    {this.state.currentPoster}*/}
                 {/*</h3>*/}
