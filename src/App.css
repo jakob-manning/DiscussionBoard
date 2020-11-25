@@ -4,9 +4,6 @@
   display: block;
   margin: auto;
 
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 2px;
   max-width: 800px;
 }
 
